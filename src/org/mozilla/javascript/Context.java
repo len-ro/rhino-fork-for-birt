@@ -2418,10 +2418,10 @@ public class Context implements Closeable {
         if (sourceName == null) {
             sourceName = "unnamed script";
         }
-        if (securityDomain != null && getSecurityController() == null) {
-            throw new IllegalArgumentException(
-                    "securityDomain should be null if setSecurityController() was never called");
-        }
+        // if (securityDomain != null && getSecurityController() == null) {
+        //     throw new IllegalArgumentException(
+        //             "securityDomain should be null if setSecurityController() was never called");
+        // }
 
         // scope should be given if and only if compiling function
         if (!(scope == null ^ returnFunction)) Kit.codeBug();
